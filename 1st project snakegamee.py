@@ -3,7 +3,7 @@ import random
  
 pygame.init()
 score =0
-font = pygame.font.Font(None, 36)  # Choose a font and size
+font = pygame.font.Font(None, 36) 
 
 width,height=600,600     #change width of screen
 game_screen=pygame.display.set_mode((width,height))
@@ -57,7 +57,7 @@ def display_snake_and_food():
 
     pygame.draw.rect(game_screen,(255,0,0),[food_x,food_y,10,10])
     for (x, y) in snake_body:  
-        pygame.draw.ellipse(game_screen,(255,255,255),[x,y,10,10]) #we can chaneg colour
+        pygame.draw.ellipse(game_screen,(255,255,255),[x,y,10,10]) 
      
     pygame.display.update()
 def reset_gamee():
@@ -104,4 +104,5 @@ def game_loop():
     
     pygame.quit()
 game_loop()
+
 
