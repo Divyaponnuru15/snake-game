@@ -5,7 +5,7 @@ pygame.init()
 score =0
 font = pygame.font.Font(None, 36) 
 
-width,height=600,600     #change width of screen
+width,height=600,600     
 game_screen=pygame.display.set_mode((width,height))
 pygame.display.set_caption("SNAKE GAME")
 snake_x,snake_y=width//2,height//2
@@ -33,11 +33,11 @@ def display_snake_and_food():
     
     game_screen.fill((0,0,0))
     score_text = font.render(f"Score: {score}", True, (255, 255, 255))
-    game_screen.blit(score_text, (10, 10))  # Draw score at top-left
+    game_screen.blit(score_text, (10, 10))  
 
     
-    snake_x=(snake_x+change_x)#%width
-    snake_y=(snake_y+change_y)#%height
+    snake_x=(snake_x+change_x)
+    snake_y=(snake_y+change_y)
     if snake_x < 0 or snake_x >= width or snake_y < 0 or snake_y >= height:
         print("GAME OVER - HIT BORDER")
         game_over=True
@@ -104,5 +104,6 @@ def game_loop():
     
     pygame.quit()
 game_loop()
+
 
 
